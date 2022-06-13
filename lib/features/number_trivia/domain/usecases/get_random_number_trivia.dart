@@ -1,3 +1,1 @@
-class GetRandomNumberTrivia{
-
-}
+class GetRandomNumberTrivia {}
