@@ -1,4 +1,3 @@
-
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
@@ -13,9 +12,9 @@ import 'get_concrete_number_trivia_test.mocks.dart';
 @GenerateMocks([NumberTriviaRepository])
 void main() {
   MockNumberTriviaRepository mockNumberTriviaRepository =
-  MockNumberTriviaRepository();
+      MockNumberTriviaRepository();
   GetRandomNumberTrivia use_case =
-  GetRandomNumberTrivia(mockNumberTriviaRepository);
+      GetRandomNumberTrivia(mockNumberTriviaRepository);
 
   setUp(() {
     mockNumberTriviaRepository = MockNumberTriviaRepository();
