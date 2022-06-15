@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:dartz/dartz.dart';
 import 'package:tdd_clean_architecture/core/error/failure.dart';
 import 'package:tdd_clean_architecture/core/platform/network_info.dart';
@@ -18,8 +20,10 @@ class NumberTriviaRepositoryImpl implements NumberTriviaRepository {
 
   @override
   Future<Either<Failure, NumberTrivia>> getConcreteNumberTrivia(int number) {
-    // TODO: implement getConcreteNumberTrivia
-    throw UnimplementedError();
+    this.networkInfo.isConnected;
+    var completer = Completer<Left<Failure, NumberTrivia>>();
+    completer.complete(Left(ServerFailure()));
+    return completer.future;
   }
 
   @override
